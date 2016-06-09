@@ -16,6 +16,6 @@ function opengrok-reindex () {
         done
     done
 }
-echo $PATH
+ln -fs /src /var/opengrok/src
 opengrok-reindex &
 exec catalina.sh run

@@ -21,7 +21,7 @@ $ git clone https://github.com/OpenGrok/OpenGrok.git
 $ docker run -t -i --rm \
     --name opengrok \
     -v ${PWD}/OpenGrok:/src \
-    -v opengrok-data:/data \
+    -v ${PWD}/OpenGrok-index:/data \
     -p 8080:8080 \
     chihchun/opengrok
 $ x-www-browser http://localhost:8080/source/
@@ -41,7 +41,7 @@ $ docker run -t -i --rm \
     --name opengrok \
     -e OPENGROK_REINDEX=true \
     -v ${PWD}/OpenGrok:/src \
-    -v opengrok-data:/data \
+    -v ${PWD}/OpenGrok-index:/data \
     -p 8080:8080 \
     chihchun/opengrok
 ```
